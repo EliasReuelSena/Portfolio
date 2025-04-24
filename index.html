@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Elias</title>
     <link rel="stylesheet" href="style.css">
+    <base href="./">
 </head>
 
 <body>
@@ -16,14 +17,14 @@
         <div class="skill R">FLUTTER</div>
         <div class="skill S">SQL</div>
         <div class="skill A">API</div>
-        <div class="skill H">HTML</div>
+        <div class="skill H">JQUERY</div>
         <div class="skill C">CSS</div>
         <div class="skill J">JSON</div>
         <div class="skill R">REACT</div>
         <div class="skill S">SQL</div>
         <div class="skill A">API</div>
     </div>
-    <div class="header">
+    <header>
         <div class="header-title">
             <svg class="title-icon" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor"
                 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -35,42 +36,44 @@
             </h1>
         </div>
         <ul class="header-options">
-            <div>
-                <p>Home</p>
+            <li>
+                <a>Home</a>
                 <div class="line-bottom"></div>
-            </div>
-            <div>
-                <p>Sobre</p>
+            </li>
+            <li>
+                <a>Sobre</a>
                 <div class="line-bottom"></div>
-            </div>
-            <div>
-                <p>Portfólio</p>
+            </li>
+            <li>
+                <a href="src/pages/portfolio/index.html">Portfólio</a>
                 <div class="line-bottom"></div>
-            </div>
-            <div>
-                <p>Contato</p>
+            </li>
+            <li>
+                <a>Contato</a>
                 <div class="line-bottom"></div>
-            </div>
+            </li>
         </ul>
-    </div>
-    <div class="content">
-        <div class="content-info">
+    </header>
+    <main>
+        <section class="content-info">
             <div class="info-apresentation">
                 <p>Olá!</p>
-                <h1>SOU UM <h1 style="color: #c8b0f0;">PROGRAMADOR FRONT-END</h1>
+                <h1>SOU UM <h1 style="color: #c8b0f0;">PROGRA<wbr>MADOR FRONT-END</h1>
                 </h1>
                 <P>Seja bem vindo ao meu portfólio</P>
             </div>
             <button class="info-button">Mais sobre mim</button>
             <div class="info-links">
                 <a href="https://www.linkedin.com/in/elias-reuel-sena/" target="_blank"><img
-                        style="height: 30px; cursor: pointer;" src="/src/assets/linkedin_icon.png" alt=""></a>
+                        style="height: 30px; cursor: pointer;" src="src/assets/linkedin_icon.png" alt=""></a>
                 <a href="https://github.com/EliasReuelSena" target="_blank"><img style="height: 30px; cursor: pointer;"
-                        src="/src/assets/GitHub_icon.png" alt=""></a>
+                        src="src/assets/GitHub_icon.png" alt=""></a>
             </div>
-        </div>
-        <img style="height: 600px; margin-right: 20px;" src="/src/assets/coding_ilustration.png" alt="">
-    </div>
+        </section>
+        <section class="content-image">
+            <img src="src/assets/coding_ilustration.png" alt="">
+        </section>
+    </main>
     <script src="script.js"></script>
 </body>
 
