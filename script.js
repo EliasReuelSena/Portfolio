@@ -30,7 +30,6 @@ menu_icon.addEventListener ('click', () => {
 
         menu_mobile_itens_text.forEach(option => {
             option.style.fontSize = '13px'
-            option.style.transition = '0.5s ease 0.3s'
         })
         
     } else {
