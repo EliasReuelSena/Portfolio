@@ -23,14 +23,14 @@ menu_icon.addEventListener ('click', () => {
             option.style.backgroundColor = '#765ca565'
         })
         
-        menu_mobile_option1.style.width = '100px'
-        menu_mobile_option2.style.width = '75px'
-        menu_mobile_option3.style.width = '75px'
-        menu_mobile_option4.style.width = '60px'
+        menu_mobile_option1.style.width = '77px'
+        menu_mobile_option2.style.width = '52px'
+        menu_mobile_option3.style.width = '50px'
+        menu_mobile_option4.style.width = '37px'
 
         menu_mobile_itens_text.forEach(option => {
             option.style.fontSize = '13px'
-            option.style.transition = '0.5s ease 0.4s'
+            option.style.transition = '0.5s ease 0.3s'
         })
         
     } else {
