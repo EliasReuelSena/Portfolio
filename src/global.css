@@ -30,6 +30,13 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+    background-color: #16131a;
+    width: 100vw;
+    height: 100vh;
+    box-shadow: inset 0px 0px 550px #291d3ac4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 ol, ul {
 	list-style: none;
@@ -50,3 +57,179 @@ table {
 /* Importações */
 
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* Estilos globais */
+
+a {
+	text-decoration: none;
+	color: white;
+}
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+    max-width: 1200px;
+    padding: 20px;
+}
+.header-main {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-options-icon {
+    display: none; 
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 10px 7px 10px 7px;
+    border: 1px solid #9675d400;
+    border-radius: 50px;
+    transition: 0.5s;
+}
+.header-options-icon:hover {
+    background-color: #765ca565;
+    border: 1px solid #9675d4;
+    box-shadow: 0px 0px 10px #c3aaf1, inset 0px 0px 10px #9675d4;
+}
+.header-options-icon-item {
+    background: white;
+    height: 2.5px;
+    width: 25px;
+    border-radius: 50px;
+    transition: 0.5s;
+}
+.header-title {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: start;
+}
+.title-icon {
+    fill: none;
+    stroke: #755ca5;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    width: 50px;
+    height: 50px;
+}
+.title-text {
+    font-family: "Mulish", sans-serif;
+    font-size: 34px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+}
+.title-link {
+    color: white;
+    text-decoration: none;
+}
+.header-options {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    width: 50%;
+}
+.header-options a {
+    font-family: "Mulish", sans-serif;
+    color: #b3adb8;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.5s;
+} 
+.header-options a:hover {
+    color: #d4c1f7;
+}
+.line-bottom {
+    background-color: #b297e4;
+    margin-top: 5px;
+    height: 2px;
+    width: 0px;
+    transition: 0.3s;
+}
+.header-options a:hover + .line-bottom{
+    width: 100%;
+}
+.header-options_mobile {
+    position: absolute;
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    top: 80px;
+    right: 0;
+    gap: 10px;
+}
+.option-mobile {
+    display: none;
+    border: none;
+    border-radius: 10px 0 0 10px;
+    background-color: rgba(245, 222, 179, 0);
+    align-items: center;
+    width: 1px;
+    color: white;
+    font-family: "Mulish", sans-serif;
+    opacity: 1;
+    transition: 0.3s;
+    overflow: clip;
+}
+.option-mobile:hover {
+    box-shadow: 0px 0px 10px #c3aaf1, inset 0px 0px 10px #9675d4;
+}
+.option-mobile a {
+    font-size: 0.1px;
+}
+.option-mobile.b {
+    transition-delay: 0.1s;
+}
+.option-mobile.c {
+    transition-delay: 0.2s;
+}
+.option-mobile.d {
+    transition-delay: 0.3s;
+}
+
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .header-options {
+        display: none;
+    }
+    .header-options-icon {
+        display: flex;
+    }
+    .header-title {
+        width: 100%;
+        align-self: flex-start;
+    }
+    .option-mobile {
+        display: block;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 8px; /* Largura do scroll vertical */
+    height: 8px; /* Altura do scroll horizontal */
+ }
+ 
+ /* Estiliza o "trilho" da barra de rolagem */
+ ::-webkit-scrollbar-track {
+    background: #0C1319; /* Cor de fundo do trilho */
+    border-radius: 10px; /* Cantos arredondados */
+ }
+ 
+ /* Estiliza o "polegar" da barra de rolagem */
+ ::-webkit-scrollbar-thumb {
+    background: #404040; /* Cor do polegar (parte que se move) */
+    border-radius: 10px; /* Cantos arredondados */
+ }
+ 
+ /* Estiliza o polegar ao passar o mouse por cima */
+ ::-webkit-scrollbar-thumb:hover {
+    background: #606060; /* Cor ao passar o mouse */
+ }
