@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Elias</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Elias Portfolio</title>
+    <link rel="stylesheet" href="index.css">
     <base href="./">
 </head>
 
 <body>
+    <header-default page-title="home"></header-default>
     <div class="animated-skills">
         <div class="skill H">HTML</div>
         <div class="skill C">CSS</div>
@@ -24,58 +25,7 @@
         <div class="skill S">SQL</div>
         <div class="skill A">API</div>
     </div>
-    <header>
-        <div class="header-main">
-            <div class="header-title">
-                <svg class="title-icon" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor"
-                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"></path>
-                </svg>
-                <h1 class="title-text"><a href="https://www.linkedin.com/in/elias-reuel-sena/?locale=en_US"
-                        target="_blank" class="title-link">Elias Sena</a>
-                </h1>
-            </div>
-            <div class="header-options-icon">
-                <span class="header-options-icon-item a"></span>
-                <span class="header-options-icon-item b"></span>
-                <span class="header-options-icon-item c"></span>
-            </div>
-            <ul class="header-options_mobile">
-                <li class="option-mobile a">
-                    <a class="option-home">Homescreen</a>
-                </li>
-                <li class="option-mobile b">
-                    <a>Portfolio</a>
-                </li>
-                <li class="option-mobile c">
-                    <a>Contato</a>
-                </li>
-                <li class="option-mobile d">
-                    <a>Sobre</a>
-                </li>
-            </ul>
-        </div>
-        <ul class="header-options">
-            <li>
-                <a>Home</a>
-                <div class="line-bottom"></div>
-            </li>
-            <li>
-                <a>Sobre</a>
-                <div class="line-bottom"></div>
-            </li>
-            <li>
-                <a href="src/pages/portfolio/index.html">Portfólio</a>
-                <div class="line-bottom"></div>
-            </li>
-            <li>
-                <a>Contato</a>
-                <div class="line-bottom"></div>
-            </li>
-        </ul>
-    </header>
-    <main>
+    <main style="padding-inline: 20px;">
         <section class="content-info">
             <div class="info-apresentation">
                 <p>Olá!</p>
@@ -95,7 +45,7 @@
             <img src="src/assets/coding_ilustration.png" alt="">
         </section>
     </main>
-    <script src="script.js"></script>
+    <script type="module" src="index.js"></script>
 </body>
 
 </html>
