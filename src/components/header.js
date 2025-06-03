@@ -2,11 +2,12 @@ class header extends HTMLElement {
     connectedCallback() {
         
         const pageTitle = this.getAttribute('page-title')
-        let linkPortfolio = pageTitle == 'home' ? './src/pages/portfolio/portfolio.html' : 'portfolio.html'
-        
+        let linkPortfolio = pageTitle == 'home' ? './src/pages/portfolio/portfolio.html' : '../portfolio/portfolio.html'
+        let linkContato = pageTitle == 'home' ? './src/pages/contato/contato.html' : '../contato/contato.html'
+        let linkSobre = pageTitle == 'home' ? './src/pages/sobre/sobre.html' : '../sobre/sobre.html'
 
         this.innerHTML = `
-            <header>
+            <header class="blur">
                 <div class="header-main">
                     <div class="header-title">
                         <svg class="title-icon" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor"
@@ -31,10 +32,10 @@ class header extends HTMLElement {
                             <a href="${linkPortfolio}">Portfolio</a>
                         </li>
                         <li class="option-mobile c">
-                            <a href="src/pages/contato/contato.html">Contato</a>
+                            <a href="${linkContato}">Contato</a>
                         </li>
                         <li class="option-mobile d">
-                            <a href="src/pages/sobre/sobre.html">Sobre</a>
+                            <a href="${linkSobre}">Sobre</a>
                         </li>
                     </ul>
                 </div>
@@ -44,15 +45,15 @@ class header extends HTMLElement {
                         <div class="line-bottom"></div>
                     </li>
                     <li>
-                        <a href="src/pages/sobre/sobre.html">Sobre</a>
+                        <a href="${linkSobre}">Sobre</a>
                         <div class="line-bottom"></div>
                     </li>
                     <li>
-                        <a href="src/pages/portfolio/portfolio.html">Portfólio</a>
+                        <a href="${linkPortfolio}">Portfólio</a>
                         <div class="line-bottom"></div>
                     </li>
                     <li>
-                        <a href="src/pages/contato/contato.html">Contato</a>
+                        <a href="${linkContato}">Contato</a>
                         <div class="line-bottom"></div>
                     </li>
                 </ul>

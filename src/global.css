@@ -3,245 +3,339 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 html {
-    overflow: auto;
+  overflow: auto;
 }
 body {
-	line-height: 1;
-    background-color: #20182b;
-    width: 100%;
-    height: 100vh;
-    overflow: auto;
-    box-shadow: inset 0px 0px 100px #0d041ae7;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  background-color: #20182b;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  box-shadow: inset 0px 0px 100px #0d041ae7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 :root {
-    /*Cores*/
-    --primary-color: #9675d4;
-    --secondary-color: #d4c1f7;
-    --accent-color: #3f2c6350;
-    --primary-background: #16131a;
+  /*Cores*/
+  --primary-color: #9675d4;
+  --secondary-color: #d4c1f7;
+  --accent-color: #3f2c6350;
+  --primary-background: #16131a;
 }
 
 /* Importações */
 
-@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
 
 /* Estilos globais */
 
+* {
+  box-sizing: border-box;
+}
 a {
-	text-decoration: none;
-	color: white;
+  text-decoration: none;
+  color: white;
 }
 header {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100vw;
-    max-width: 1200px;
-    padding: 20px;
+  display: flex;
+  width: 100%;
+  max-width: 1300px;
+  padding: 20px;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9;
+  backdrop-filter: blur(10px);
+}
+main {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 .header-main {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
 }
 .header-options-icon {
-    display: none; 
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    padding: 10px 7px 10px 7px;
-    border: 1px solid #9675d400;
-    border-radius: 50px;
-    transition: 0.5s;
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 10px 7px 10px 7px;
+  border: 1px solid #9675d400;
+  border-radius: 50px;
+  transition: 0.5s;
 }
 .header-options-icon:hover {
-    background-color: var(--secondary-color);
-    border: 1px solid var(--primary-color);
-    box-shadow: 0px 0px 10px var(--secondary-color), inset 0px 0px 10px var(--primary-color);
+  background-color: var(--secondary-color);
+  border: 1px solid var(--primary-color);
+  box-shadow: 0px 0px 10px var(--secondary-color),
+    inset 0px 0px 10px var(--primary-color);
 }
 .header-options-icon-item {
-    background: white;
-    height: 2.5px;
-    width: 25px;
-    border-radius: 50px;
-    transition: 0.5s;
+  background: white;
+  height: 2.5px;
+  width: 25px;
+  border-radius: 50px;
+  transition: 0.5s;
 }
 .header-title {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    justify-content: start;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: start;
 }
 .title-icon {
-    fill: none;
-    stroke: var(--primary-color);
-    stroke-width: 2.5;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    width: 50px;
-    height: 50px;
+  fill: none;
+  stroke: var(--primary-color);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  width: 35px;
+  height: 35px;
 }
 .title-text {
-    font-family: "Mulish", sans-serif;
-    font-size: 34px;
-    font-weight: 600;
-    color: white;
-    cursor: pointer;
+  font-family: "Mulish", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
 }
 .title-link {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 .header-options {
-    display: flex;
-    gap: 20px;
-    justify-content: space-between;
-    width: 50%;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  width: 500px;
 }
 .header-options a {
-    font-family: "Mulish", sans-serif;
-    color: #b3adb8;
-    font-size: 18px;
-    font-weight: 600;
-    cursor: pointer;
-    text-decoration: none;
-    transition: all 0.5s;
-} 
+  font-family: "Mulish", sans-serif;
+  color: #b3adb8;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.5s;
+}
 .header-options a:hover {
-    color: var(--secondary-color);
+  color: var(--secondary-color);
 }
 .line-bottom {
-    background-color: var(--secondary-color);
-    margin-top: 5px;
-    height: 2px;
-    width: 0px;
-    transition: 0.3s;
+  background-color: var(--secondary-color);
+  margin-top: 5px;
+  height: 2px;
+  width: 0px;
+  transition: 0.3s;
 }
-.header-options a:hover + .line-bottom{
-    width: 100%;
+.header-options a:hover + .line-bottom {
+  width: 100%;
 }
 .header-options_mobile {
-    position: absolute;
-    display: flex;
-    align-items: end;
-    flex-direction: column;
-    top: 80px;
-    right: 0;
-    gap: 10px;
+  position: absolute;
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  top: 80px;
+  right: 0;
+  gap: 10px;
 }
 .option-mobile {
-    display: none;
-    border: none;
-    border-radius: 10px 0 0 10px;
-    background-color: rgba(245, 222, 179, 0);
-    align-items: center;
-    width: 1px;
-    color: white;
-    font-family: "Mulish", sans-serif;
-    opacity: 1;
-    transition: 0.3s;
-    overflow: clip;
+  display: none;
+  border: none;
+  border-radius: 10px 0 0 10px;
+  background-color: rgba(245, 222, 179, 0);
+  align-items: center;
+  width: 1px;
+  color: white;
+  font-family: "Mulish", sans-serif;
+  opacity: 1;
+  transition: 0.3s;
+  overflow: clip;
 }
 .option-mobile:hover {
-    box-shadow: 0px 0px 10px var(--secondary-color), inset 0px 0px 10px var(--primary-color);
+  box-shadow: 0px 0px 10px var(--secondary-color),
+    inset 0px 0px 10px var(--primary-color);
 }
 .option-mobile a {
-    font-size: 0.1px;
+  font-size: 0.1px;
 }
 .option-mobile.b {
-    transition-delay: 0.1s;
+  transition-delay: 0.1s;
 }
 .option-mobile.c {
-    transition-delay: 0.2s;
+  transition-delay: 0.2s;
 }
 .option-mobile.d {
-    transition-delay: 0.3s;
+  transition-delay: 0.3s;
 }
 
 @media (max-width: 700px) {
-    header {
-        flex-direction: column;
-        gap: 10px;
-    }
-    .header-options {
-        display: none;
-    }
-    .header-options-icon {
-        display: flex;
-    }
-    .header-title {
-        width: 100%;
-        align-self: flex-start;
-    }
-    .option-mobile {
-        display: block;
-    }
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .header-options {
+    display: none;
+  }
+  .header-options-icon {
+    display: flex;
+  }
+  .header-title {
+    width: 100%;
+    align-self: flex-start;
+  }
+  .option-mobile {
+    display: block;
+  }
 }
 
 ::-webkit-scrollbar {
-    width: 8px; /* Largura do scroll vertical */
-    height: 8px; /* Altura do scroll horizontal */
- }
- 
- /* Estiliza o "trilho" da barra de rolagem */
- ::-webkit-scrollbar-track {
-    background: #0C1319; /* Cor de fundo do trilho */
-    border-radius: 10px; /* Cantos arredondados */
- }
- 
- /* Estiliza o "polegar" da barra de rolagem */
- ::-webkit-scrollbar-thumb {
-    background: #404040; /* Cor do polegar (parte que se move) */
-    border-radius: 10px; /* Cantos arredondados */
- }
- 
- /* Estiliza o polegar ao passar o mouse por cima */
- ::-webkit-scrollbar-thumb:hover {
-    background: #606060; /* Cor ao passar o mouse */
- }
+  width: 8px; /* Largura do scroll vertical */
+  height: 8px; /* Altura do scroll horizontal */
+}
+
+/* Estiliza o "trilho" da barra de rolagem */
+::-webkit-scrollbar-track {
+  background: #0c1319; /* Cor de fundo do trilho */
+  border-radius: 10px; /* Cantos arredondados */
+}
+
+/* Estiliza o "polegar" da barra de rolagem */
+::-webkit-scrollbar-thumb {
+  background: #404040; /* Cor do polegar (parte que se move) */
+  border-radius: 10px; /* Cantos arredondados */
+}
+
+/* Estiliza o polegar ao passar o mouse por cima */
+::-webkit-scrollbar-thumb:hover {
+  background: #606060; /* Cor ao passar o mouse */
+}
